@@ -28,3 +28,9 @@ section {
   padding: 10vh;
   background: #ffffff;
 }
+
+footer {
+  background: #000000;
+  color: #ffffff;
+  padding: 2vh;
+}
