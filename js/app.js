@@ -4,25 +4,46 @@ let begin = () => {
   let btnRout = document.getElementById('btn-trazar-ruta');
   let getPosition = localizacion => {
     let latitude = localizacion.coords.latitude;
-    console.log(latitude);
+
     let longitude = localizacion.coords.longitude;
-    console.log(longitude);
+
     const mapBox = document.getElementById('map');
     let map = new google.maps.Map(mapBox, {
       zoom: 15,
       center: {
         lat: latitude,
         lng: longitude
-      }                      
-    }); 
+      }
+    });
     let miUbicacion = new google.maps.Marker({
-      position: {lat: latitude,
-        lng: longitude},
+      position: {
+        lat: latitude,
+        lng: longitude
+      },
       animation: google.maps.Animation.DROP,
       map: map
-    });  
+    });
+    let calculateAndDisplayRoute = function(directionsService, directionsDisplay) {
+      directionsService.route({
+        origin: inputOrigin.value,
+        destination: inputDestination.value,
+        travelMode: 'DRIVING'
+
+      }, function(response, status) {
+        if (status === 'OK') {
+          directionsDisplay.setDirections(response);
+        } else {
+          window.alert('No se encontro una ruta');
+        }
+      });
+      directionsDisplay.setMap(map);
+    };
+    let trazarRuta = function() {
+      calculateAndDisplayRoute(directionsService, directionsDisplay);
+    };
+    btnRout.addEventListener('click', trazarRuta);
   };
-    
+
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(getPosition);
   } else {
