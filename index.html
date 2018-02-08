@@ -6,49 +6,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>easy-vreco</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="assets/images/bicicleta.png" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Paytone+One|Raleway" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
-<header>
-  <nav class="navbar navbar-light">
-    <a class="navbar-brand" href="#">
-    <img src="assets/images/ruta.svg" alt="logo route">
-    <spam>Route Maps</spam></a>
-  </nav>
-</header>
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-4 col-lg-4">
-        <p class="text-center text-route">"Cuando el espíritu está bajo, cuando el día aparece oscuro, cuando el trabajo se pone monótono, cuando la esperanza apenas está presente, sólo monte una bicicleta y salga a dar una vuelta por la carretera, todas sus preocupaciones desaparecerán".</p>
-        <div class="text-center box-image-bicicleta"><img class="image-bicicleta" src="assets/images/montana.svg" alt="" height="100px"></div>
-        <p class="mt-3">Para trazar su ruta: </p>
-        <input type="text" class="form-control mt-2" id="origin" placeholder="punto partida">
-        <input type="text" class="form-control mt-2" id="destination" placeholder="destino">
-        <button type="button" class="btn btn-dark mt-2" id="btn-trazar-ruta">trazar ruta</button>
-      </div>
-      <div class="col-xs-12 col-md-8 col-lg-8">
-        <div class="mt-2" id="map">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-lg-12 text-center"><p>Easy Vreco by Melin@ Pernia L@ura Jimenez M@rina Rodriguez.</p>
-            </div>
-        </div>
-    </div>
-</footer>
+
 <body>
+  <header>
+    <nav class="navbar navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/ruta.svg" alt="logo route">
+        <spam>Route Maps</spam>
+      </a>
+    </nav>
+  </header>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-4 col-lg-4">
+          <p class="text-center text-route">"Cuando el espíritu está bajo, cuando el día aparece oscuro, cuando el trabajo se pone monótono, cuando la esperanza
+            apenas está presente, sólo monte una bicicleta y salga a dar una vuelta por la carretera, todas sus preocupaciones
+            desaparecerán".</p>
+          <div class="text-center box-image-bicicleta">
+            <img class="image-bicicleta" src="assets/images/montana.svg" alt="" height="100px">
+          </div>
+          <p class="mt-3">Para trazar su ruta: </p>
+          <input type="text" class="form-control mt-2" id="origin" placeholder="punto partida">
+          <input type="text" class="form-control mt-2" id="destination" placeholder="destino">
+          <button type="button" class="btn btn-dark mt-2" id="btn-trazar-ruta">trazar ruta</button>
+        </div>
+        <div class="col-xs-12 col-md-8 col-lg-8">
+          <div class="mt-2" id="map">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12 text-center">
+          <p>Easy Vreco by Melin@ Pernia L@ura Jimenez M@rina Rodriguez.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt1RTdnAKEP0cFMwJv9w-hhVl6yjG1TA8&libraries=places">
   </script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <script src="js/app.js"></script>
 </body>
 
