@@ -1,0 +1,30 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+nav {
+  background: #e7bb35;
+  box-shadow: 1px 1px 10px #d2d3d4;
+}
+
+nav spam {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 28px;
+  color: #000000;
+}
+
+nav img {
+  width: 30px;
+  height: 30px;
+}
+
+#map {
+  height: 70vh;
+  border: 2px solid #e7bb35;
+  box-shadow: 2px 2px 5px #e7bb35;
+}
+
+section {
+  padding: 10vh;
+  background: #ffffff;
+}
