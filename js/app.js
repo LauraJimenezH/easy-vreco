@@ -6,11 +6,10 @@ let begin = () => {
   let autocompleteDestination = new google.maps.places.Autocomplete(inputDestination);
   let directionsService = new google.maps.DirectionsService;
   let directionsDisplay = new google.maps.DirectionsRenderer;
+  let iconBase = 'assets/images/bicicleta.png';
   let getPosition = localizacion => {
     let latitude = localizacion.coords.latitude;
-
     let longitude = localizacion.coords.longitude;
-
     const mapBox = document.getElementById('map');
     let map = new google.maps.Map(mapBox, {
       zoom: 15,
@@ -25,6 +24,7 @@ let begin = () => {
         lng: longitude
       },
       animation: google.maps.Animation.DROP,
+      icon: iconBase,
       map: map
     });
     let calculateAndDisplayRoute = function(directionsService, directionsDisplay) {
