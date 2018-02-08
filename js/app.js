@@ -8,9 +8,7 @@ let begin = () => {
   let directionsDisplay = new google.maps.DirectionsRenderer;
   let getPosition = localizacion => {
     let latitude = localizacion.coords.latitude;
-
     let longitude = localizacion.coords.longitude;
-
     const mapBox = document.getElementById('map');
     let map = new google.maps.Map(mapBox, {
       zoom: 15,
