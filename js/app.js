@@ -2,6 +2,10 @@ let begin = () => {
   let inputOrigin = document.getElementById('origin');
   let inputDestination = document.getElementById('destination');
   let btnRout = document.getElementById('btn-trazar-ruta');
+  let autocompleteOrigin = new google.maps.places.Autocomplete(inputOrigin);
+  let autocompleteDestination = new google.maps.places.Autocomplete(inputDestination);
+  let directionsService = new google.maps.DirectionsService;
+  let directionsDisplay = new google.maps.DirectionsRenderer;
   let getPosition = localizacion => {
     let latitude = localizacion.coords.latitude;
 
