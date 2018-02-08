@@ -19,18 +19,39 @@ nav img {
 }
 
 #map {
-  height: 70vh;
+  height: 50vh;
   border: 2px solid #e7bb35;
   box-shadow: 2px 2px 5px #e7bb35;
 }
 
 section {
-  padding: 10vh;
+  padding: 2vh 0vh;
   background: #ffffff;
 }
 
 footer {
   background: #000000;
   color: #ffffff;
-  padding: 2vh;
+  padding: 1vh;
+}
+
+@media (max-width: 320px) {
+  .text-route, .box-image-bicicleta {
+    display: none;
+  }
+}
+
+@media (min-width: 321px) {
+  section {
+    padding: 5vh;
+  }
+  .image-bicicleta {
+    height: 100px;
+  }
+  #map {
+    height: 70vh;
+  }
+  footer {
+    padding: 1.5vh;
+  }
 }
